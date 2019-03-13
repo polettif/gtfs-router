@@ -72,16 +72,13 @@ with next available service." />
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
+  <a href="../index.html">Home</a>
 </li>
 <li>
-  <a href="../articles/gtfsrouter.html">Get started</a>
+  <a href="../articles/index.html">Vignettes</a>
 </li>
 <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="../reference/index.html">Functions</a>
 </li>
       </ul>
       
@@ -117,7 +114,7 @@ with next available service.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>go_home</span>(<span class='kw'>wait</span> <span class='kw'>=</span> <span class='fl'>0</span>)</pre>
+    <pre class="usage"><span class='fu'>go_home</span>(<span class='kw'>wait</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='no'>start_time</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -126,6 +123,11 @@ with next available service.</p>
       <th>wait</th>
       <td><p>An integer specifying the n-th next service. That is, <code>wait = n</code>
 will return the n-th available service after the next immediate service.</p></td>
+    </tr>
+    <tr>
+      <th>start_time</th>
+      <td><p>If given, search for connections after specified time; if
+not given, search for connections from current time.</p></td>
     </tr>
     </table>
     
