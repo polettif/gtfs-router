@@ -246,7 +246,7 @@
 <a class="sourceLine" id="cb7-3" data-line-number="3">to &lt;-<span class="st"> "Alexanderplatz"</span></a>
 <a class="sourceLine" id="cb7-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.time">system.time</a></span> (<span class="kw"><a href="../reference/gtfs_route.html">gtfs_route</a></span> (gtfs, <span class="dt">from =</span> from, <span class="dt">to =</span> to, <span class="dt">start_time =</span> <span class="st">"12:00:00"</span>, <span class="dt">day =</span> <span class="st">"Sunday"</span>))</a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   0.228   0.000   0.116</code></pre>
+##   0.184   0.008   0.117</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span> (gtfs)</a></code></pre></div>
 <pre><code>## [1] "calendar"   "routes"     "trips"      "stop_times" "stops"     
 ## [6] "transfers"</code></pre>
@@ -256,7 +256,7 @@
 ## [6] "transfers"  "timetable"  "stop_ids"   "trip_ids"</code></pre>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.time">system.time</a></span> (<span class="kw"><a href="../reference/gtfs_route.html">gtfs_route</a></span> (gtfs, <span class="dt">from =</span> from, <span class="dt">to =</span> to, <span class="dt">start_time =</span> <span class="st">"12:00:00"</span>))</a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   0.156   0.004   0.081</code></pre>
+##   0.160   0.004   0.095</code></pre>
 <p>Note that the <code>day</code> parameter is used to extract the timetable, after which it is no longer required in the actual call to <code><a href="../reference/gtfs_route.html">gtfs_route()</a></code>.</p>
 </div>
 <div id="routing-by-mode-of-transport" class="section level2">
@@ -690,32 +690,40 @@
 <a class="sourceLine" id="cb27-7" data-line-number="7">                      <span class="dt">end_time =</span> end_time)</a></code></pre></div>
 <pre><code>## Loading required namespace: geodist</code></pre>
 <pre><code>## Loading required namespace: lwgeom</code></pre>
+<pre><code>## Registered S3 methods overwritten by 'ggplot2':
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
+<pre><code>## Registered S3 method overwritten by 'R.oo':
+##   method        from       
+##   throw.default R.methodsS3</code></pre>
 <pre><code>## Linking to GEOS 3.5.0, GDAL 2.2.2, PROJ 4.8.0</code></pre>
 <p>Note that the isochrone will be calculated out to five minutes after the first service to depart from Alexander Platz <em>after</em> 12:00. If, for example, this first service actually departs at 12:02, then the isochrones will define the range of all services leaving that station and travelling until 12:07. This function returns an object of class <code>gtfs_isochrone</code>, which has the following structure:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span> (ic)</a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span> (ic)</a></code></pre></div>
 <pre><code>## List of 7
 ##  $ start_point:Classes 'sf' and 'data.frame':    1 obs. of  2 variables:
 ##   ..$ stop_name: Factor w/ 1 level "S+U Alexanderplatz (Berlin) [U8]": 1
-##   ..$ geometry :sfc_POINT of length 1; first list element: Classes 'XY', 'POINT', 'sfg'  num [1:2] 13.4 52.5
+##   ..$ geometry :sfc_POINT of length 1; first list element:  'XY' num [1:2] 13.4 52.5
 ##   ..- attr(*, "sf_column")= chr "geometry"
 ##   ..- attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: NA
 ##   .. ..- attr(*, "names")= chr "stop_name"
 ##  $ mid_points :Classes 'sf' and 'data.frame':    11 obs. of  2 variables:
 ##   ..$ stop_name: Factor w/ 10 levels "S Hackescher Markt (Berlin)",..: 4 4 2 1 10 7 3 5 6 8 ...
-##   ..$ geometry :sfc_POINT of length 11; first list element: Classes 'XY', 'POINT', 'sfg'  num [1:2] 13.4 52.5
+##   ..$ geometry :sfc_POINT of length 11; first list element:  'XY' num [1:2] 13.4 52.5
 ##   ..- attr(*, "sf_column")= chr "geometry"
 ##   ..- attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: NA
 ##   .. ..- attr(*, "names")= chr "stop_name"
 ##  $ end_points :Classes 'sf' and 'data.frame':    7 obs. of  2 variables:
 ##   ..$ stop_name: Factor w/ 7 levels "S+U Friedrichstr. Bhf (Berlin)",..: 3 2 1 5 4 6 7
-##   ..$ geometry :sfc_POINT of length 7; first list element: Classes 'XY', 'POINT', 'sfg'  num [1:2] 13.4 52.5
+##   ..$ geometry :sfc_POINT of length 7; first list element:  'XY' num [1:2] 13.4 52.5
 ##   ..- attr(*, "sf_column")= chr "geometry"
 ##   ..- attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: NA
 ##   .. ..- attr(*, "names")= chr "stop_name"
-##  $ routes     :sfc_LINESTRING of length 7; first list element:  XY [1:2, 1:2] 13.4 13.4 52.5 52.5
+##  $ routes     :sfc_LINESTRING of length 7; first list element:  'XY' num [1:2, 1:2] 13.4 13.4 52.5 52.5
 ##  $ hull       :Classes 'sf' and 'data.frame':    1 obs. of  3 variables:
 ##   ..$ area      :Object of class units:
-##  atomic [1:1] 5719145
+##  num 5719145
 ##   .. ..- attr(*, "units")=List of 2
 ##   .. .. ..$ numerator  : chr [1:2] "m" "m"
 ##   .. .. ..$ denominator: chr(0) 
@@ -735,7 +743,7 @@
 ##  - attr(*, "class")= chr [1:2] "gtfs_isochrone" "list"</code></pre>
 <p>As mentioned above, the <code>start_point</code> item defines the single start point for the isochrone; the <code>mid_points</code> include stops which all routes pass through on their way to the terminal points reachable within the specified time range; and <code>end_points</code> defines those terminal, isochrone points. The return object also includes information on the non-convex (“alpha”) hull defining the boundary of the terminal points (see the <a href="https://cran.r-project.org/package=alphahull"><code>alphahull</code> package</a> for details), and geometric lines representing the actual routes taken. Finally, the <code>hull</code> time also quantifies its area and width-to-length ratio. The latter is informative, as higher values generally indicate a greater reachable area, while lower values are typically indicative of a radial system primarily serving transport in two directions (in and out of a city).</p>
 <p>The object returned from the <code><a href="../reference/gtfs_isochrone.html">gtfs_isochrone()</a></code> function also has its own plot method, which automatically opens a browser tab, and displays the start and end points (in green and red, respectively), all intermediate points, and the lines of the routes travelled. This uses the <code>mapview</code> package which must be installed for this to work. A static example is shown below:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span> (ic)</a></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span> (ic)</a></code></pre></div>
 <p><img src="isochrone.png" width="100%"></p>
 </div>
   </div>
