@@ -167,28 +167,26 @@ regarding timetable construction).</p></td>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>square matrix of distances between nodes</p>
+    <p>An object of class <code>gtfs_isochrone</code>, including <span class="pkg">sf</span>-formatted
+points representing the <code>from</code> station (<code>start_point</code>), the terminal end
+stations (<code>end_points</code>), and all intermediate stations (<code>mid_points</code>), along
+with lines representing the individual routes. A non-convex ("alpha") hull is
+also returned (as an <span class="pkg">sf</span> <code>POLYGON</code> object), including measures of area
+and "elongation", which equals zero for a circle, and increases towards one
+for more elongated shapes.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='berlin_gtfs_to_zip.html'>berlin_gtfs_to_zip</a></span> ()
 <span class='no'>f</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/file.path'>file.path</a></span> (<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/tempfile'>tempdir</a></span> (), <span class='st'>"vbb.zip"</span>)
 <span class='no'>g</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='extract_gtfs.html'>extract_gtfs</a></span> (<span class='no'>f</span>)
-<span class='no'>g</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='gtfs_timetable.html'>gtfs_timetable</a></span> (<span class='no'>g</span>)</div><div class='output co'>#&gt; <span class='message'>Day not specified; extracting timetable for Wednesday</span></div><div class='input'><span class='no'>from</span> <span class='kw'>&lt;-</span> <span class='st'>"Alexanderplatz"</span>
+<span class='no'>g</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='gtfs_timetable.html'>gtfs_timetable</a></span> (<span class='no'>g</span>)</div><div class='output co'>#&gt; <span class='message'>Day not specified; extracting timetable for Thursday</span></div><div class='input'><span class='no'>from</span> <span class='kw'>&lt;-</span> <span class='st'>"Alexanderplatz"</span>
 <span class='no'>start_time</span> <span class='kw'>&lt;-</span> <span class='fl'>12</span> * <span class='fl'>3600</span> + <span class='fl'>600</span>
 <span class='no'>end_time</span> <span class='kw'>&lt;-</span> <span class='no'>start_time</span> + <span class='fl'>600</span>
 <span class='no'>ic</span> <span class='kw'>&lt;-</span> <span class='fu'>gtfs_isochrone</span> (<span class='no'>g</span>,
                       <span class='kw'>from</span> <span class='kw'>=</span> <span class='no'>from</span>,
                       <span class='kw'>start_time</span> <span class='kw'>=</span> <span class='no'>start_time</span>,
-                      <span class='kw'>end_time</span> <span class='kw'>=</span> <span class='no'>end_time</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required namespace: geodist</span></div><div class='output co'>#&gt; <span class='message'>Loading required namespace: lwgeom</span></div><div class='output co'>#&gt; <span class='message'>Registered S3 methods overwritten by 'ggplot2':</span>
-#&gt; <span class='message'>  method         from </span>
-#&gt; <span class='message'>  [.quosures     rlang</span>
-#&gt; <span class='message'>  c.quosures     rlang</span>
-#&gt; <span class='message'>  print.quosures rlang</span></div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'R.oo':</span>
-#&gt; <span class='message'>  method        from       </span>
-#&gt; <span class='message'>  throw.default R.methodsS3</span></div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'spatstat':</span>
-#&gt; <span class='message'>  method     from</span>
-#&gt; <span class='message'>  print.boxx cli </span></div><div class='output co'>#&gt; <span class='message'>Linking to GEOS 3.5.0, GDAL 2.2.2, PROJ 4.8.0</span></div><span class='co'># NOT RUN {</span>
+                      <span class='kw'>end_time</span> <span class='kw'>=</span> <span class='no'>end_time</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required namespace: geodist</span></div><div class='output co'>#&gt; <span class='message'>Loading required namespace: lwgeom</span></div><div class='output co'>#&gt; <span class='message'>Linking to GEOS 3.5.0, GDAL 2.2.2, PROJ 4.8.0</span></div><span class='co'># NOT RUN {</span>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/graphics/topics/plot'>plot</a></span> (<span class='no'>ic</span>)
 <span class='co'># }</span></pre>
   </div>
