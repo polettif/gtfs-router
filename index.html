@@ -74,7 +74,7 @@
 <div id="gtfs-router" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#gtfs-router" class="anchor"></a>GTFS Router</h1></div>
-<p><strong>R</strong> package for routing <a href="https://developers.google.com/transit/gtfs/">GTFS (General Transit Feed Specification)</a> data. See <a href="https://atfutures.github.io/gtfs-router/">the website</a> for full details.</p>
+<p><strong>R</strong> package for routing with <a href="https://developers.google.com/transit/gtfs/">GTFS (General Transit Feed Specification)</a> data. See <a href="https://atfutures.github.io/gtfs-router/">the website</a> for full details.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -93,7 +93,7 @@
 <a class="sourceLine" id="cb4-2" data-line-number="2">tempfiles &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list.files">list.files</a></span> (<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/tempfile">tempdir</a></span> (), <span class="dt">full.names =</span> <span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb4-3" data-line-number="3">filename &lt;-<span class="st"> </span>tempfiles [<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/grep">grep</a></span> (<span class="st">"vbb.zip"</span>, tempfiles)]</a>
 <a class="sourceLine" id="cb4-4" data-line-number="4">filename</a></code></pre></div>
-<pre><code>## [1] "/tmp/Rtmphuv5KV/vbb.zip"</code></pre>
+<pre><code>## [1] "/tmp/RtmpVKjiZ0/vbb.zip"</code></pre>
 <p>For normal package use, <code>filename</code> will specify the name of the local GTFS data stored as a single <code>.zip</code> file.</p>
 <div id="gtfs_route" class="section level3">
 <h3 class="hasAnchor">
@@ -116,73 +116,73 @@
 <tbody>
 <tr class="odd">
 <td align="left">U8</td>
-<td align="left">U Paracelsus-Bad</td>
+<td align="left">S+U Wittenau</td>
 <td align="left">U Schonleinstr. (Berlin)</td>
-<td align="left">12:04:00</td>
-<td align="left">12:04:00</td>
+<td align="left">12:09:00</td>
+<td align="left">12:09:00</td>
 </tr>
 <tr class="even">
 <td align="left">U8</td>
-<td align="left">U Paracelsus-Bad</td>
+<td align="left">S+U Wittenau</td>
 <td align="left">U Kottbusser Tor (Berlin)</td>
-<td align="left">12:06:00</td>
-<td align="left">12:06:00</td>
+<td align="left">12:11:00</td>
+<td align="left">12:11:00</td>
 </tr>
 <tr class="odd">
 <td align="left">U8</td>
-<td align="left">U Paracelsus-Bad</td>
+<td align="left">S+U Wittenau</td>
 <td align="left">U Moritzplatz (Berlin)</td>
-<td align="left">12:08:00</td>
-<td align="left">12:08:00</td>
+<td align="left">12:13:00</td>
+<td align="left">12:13:00</td>
 </tr>
 <tr class="even">
 <td align="left">U8</td>
-<td align="left">U Paracelsus-Bad</td>
+<td align="left">S+U Wittenau</td>
 <td align="left">U Heinrich-Heine-Str. (Berlin)</td>
-<td align="left">12:09:30</td>
-<td align="left">12:09:30</td>
+<td align="left">12:14:30</td>
+<td align="left">12:14:30</td>
 </tr>
 <tr class="odd">
 <td align="left">U8</td>
-<td align="left">U Paracelsus-Bad</td>
+<td align="left">S+U Wittenau</td>
 <td align="left">S+U Jannowitzbrucke (Berlin)</td>
-<td align="left">12:10:30</td>
-<td align="left">12:10:30</td>
+<td align="left">12:15:30</td>
+<td align="left">12:15:30</td>
 </tr>
 <tr class="even">
-<td align="left">S5</td>
-<td align="left">S Westkreuz</td>
+<td align="left">S3</td>
+<td align="left">S Spandau Bhf</td>
 <td align="left">S+U Jannowitzbrucke (Berlin)</td>
-<td align="left">12:15:24</td>
-<td align="left">12:15:54</td>
-</tr>
-<tr class="odd">
-<td align="left">S5</td>
-<td align="left">S Westkreuz</td>
-<td align="left">S+U Alexanderplatz Bhf (Berlin)</td>
-<td align="left">12:17:24</td>
-<td align="left">12:18:12</td>
-</tr>
-<tr class="even">
-<td align="left">S5</td>
-<td align="left">S Westkreuz</td>
-<td align="left">S Hackescher Markt (Berlin)</td>
-<td align="left">12:19:24</td>
-<td align="left">12:19:54</td>
-</tr>
-<tr class="odd">
-<td align="left">S5</td>
-<td align="left">S Westkreuz</td>
-<td align="left">S+U Friedrichstr. Bhf (Berlin)</td>
+<td align="left">12:20:54</td>
 <td align="left">12:21:24</td>
-<td align="left">12:22:12</td>
+</tr>
+<tr class="odd">
+<td align="left">S3</td>
+<td align="left">S Spandau Bhf</td>
+<td align="left">S+U Alexanderplatz Bhf (Berlin)</td>
+<td align="left">12:22:54</td>
+<td align="left">12:23:42</td>
 </tr>
 <tr class="even">
-<td align="left">S5</td>
-<td align="left">S Westkreuz</td>
+<td align="left">S3</td>
+<td align="left">S Spandau Bhf</td>
+<td align="left">S Hackescher Markt (Berlin)</td>
+<td align="left">12:24:54</td>
+<td align="left">12:25:24</td>
+</tr>
+<tr class="odd">
+<td align="left">S3</td>
+<td align="left">S Spandau Bhf</td>
+<td align="left">S+U Friedrichstr. Bhf (Berlin)</td>
+<td align="left">12:26:54</td>
+<td align="left">12:27:42</td>
+</tr>
+<tr class="even">
+<td align="left">S3</td>
+<td align="left">S Spandau Bhf</td>
 <td align="left">S+U Berlin Hauptbahnhof</td>
-<td align="left">12:24:06</td>
-<td align="left">12:24:42</td>
+<td align="left">12:29:36</td>
+<td align="left">12:30:12</td>
 </tr>
 </tbody>
 </table>
@@ -190,7 +190,7 @@
 <div id="gtfs_isochrone" class="section level3">
 <h3 class="hasAnchor">
 <a href="#gtfs_isochrone" class="anchor"></a>gtfs_isochrone</h3>
-<p>Isochrones from a nominated station - lines delineating the range reachable within a given time - can be extracted with the <code><a href="reference/gtfs_isochrone.html">gtfs_isochrone()</a></code> function, which returns a list of all stations reachable within the specified time period from the nominated station station.</p>
+<p>Isochrones from a nominated station - lines delineating the range reachable within a given time - can be extracted with the <code><a href="reference/gtfs_isochrone.html">gtfs_isochrone()</a></code> function, which returns a list of all stations reachable within the specified time period from the nominated station.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">gtfs &lt;-<span class="st"> </span><span class="kw"><a href="reference/extract_gtfs.html">extract_gtfs</a></span> (filename)</a>
 <a class="sourceLine" id="cb7-2" data-line-number="2">gtfs &lt;-<span class="st"> </span><span class="kw"><a href="reference/gtfs_timetable.html">gtfs_timetable</a></span> (gtfs) <span class="co"># A pre-processing step to speed up queries</span></a>
 <a class="sourceLine" id="cb7-3" data-line-number="3">x &lt;-<span class="st"> </span><span class="kw"><a href="reference/gtfs_isochrone.html">gtfs_isochrone</a></span> (gtfs,</a>
