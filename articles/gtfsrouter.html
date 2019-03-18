@@ -68,7 +68,7 @@
       <h1>gtfsrouter</h1>
                         <h4 class="author">Mark Padgham</h4>
             
-            <h4 class="date">2019-03-17</h4>
+            <h4 class="date">2019-03-18</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/ATFutures/gtfs-router/blob/master/vignettes/gtfsrouter.Rmd"><code>vignettes/gtfsrouter.Rmd</code></a></small>
       <div class="hidden name"><code>gtfsrouter.Rmd</code></div>
@@ -103,7 +103,7 @@
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">from &lt;-<span class="st"> "Innsbrucker Platz"</span></a>
 <a class="sourceLine" id="cb4-2" data-line-number="2">to &lt;-<span class="st"> "Alexanderplatz"</span></a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw"><a href="../reference/gtfs_route.html">gtfs_route</a></span> (gtfs, <span class="dt">from =</span> from, <span class="dt">to =</span> to)</a></code></pre></div>
-<pre><code>## Day not specified; extracting timetable for Sunday</code></pre>
+<pre><code>## Day not specified; extracting timetable for Monday</code></pre>
 <table class="table">
 <thead><tr class="header">
 <th align="left">route_name</th>
@@ -114,88 +114,123 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">S42</td>
-<td align="left">S Sudkreuz Bhf</td>
+<td align="left">U4</td>
+<td align="left">U Nollendorfplatz</td>
 <td align="left">S+U Innsbrucker Platz (Berlin)</td>
-<td align="left">12:06:42</td>
-<td align="left">12:07:12</td>
+<td align="left">12:06:00</td>
+<td align="left">12:06:00</td>
 </tr>
 <tr class="even">
-<td align="left">S42</td>
-<td align="left">S Sudkreuz Bhf</td>
-<td align="left">S Schoneberg (Berlin)</td>
-<td align="left">12:08:18</td>
-<td align="left">12:08:48</td>
+<td align="left">U4</td>
+<td align="left">U Nollendorfplatz</td>
+<td align="left">U Rathaus Schoneberg (Berlin)</td>
+<td align="left">12:07:00</td>
+<td align="left">12:07:00</td>
 </tr>
 <tr class="odd">
-<td align="left">S42</td>
-<td align="left">S Sudkreuz Bhf</td>
-<td align="left">S Sudkreuz Bhf (Berlin)</td>
-<td align="left">12:10:12</td>
-<td align="left">12:10:12</td>
+<td align="left">U4</td>
+<td align="left">U Nollendorfplatz</td>
+<td align="left">U Bayerischer Platz (Berlin)</td>
+<td align="left">12:08:30</td>
+<td align="left">12:08:30</td>
 </tr>
 <tr class="even">
-<td align="left">S2</td>
-<td align="left">S Buch</td>
-<td align="left">S Sudkreuz Bhf (Berlin)</td>
-<td align="left">12:16:18</td>
-<td align="left">12:16:54</td>
+<td align="left">U4</td>
+<td align="left">U Nollendorfplatz</td>
+<td align="left">U Viktoria-Luise-Platz (Berlin)</td>
+<td align="left">12:10:00</td>
+<td align="left">12:10:00</td>
 </tr>
 <tr class="odd">
-<td align="left">S2</td>
-<td align="left">S Buch</td>
-<td align="left">S+U Yorckstr. S2 S25 S26 U7 (Berlin)</td>
-<td align="left">12:19:00</td>
-<td align="left">12:19:30</td>
+<td align="left">U4</td>
+<td align="left">U Nollendorfplatz</td>
+<td align="left">U Nollendorfplatz (Berlin)</td>
+<td align="left">12:12:00</td>
+<td align="left">12:12:00</td>
 </tr>
 <tr class="even">
-<td align="left">S2</td>
-<td align="left">S Buch</td>
-<td align="left">S Anhalter Bahnhof (Berlin)</td>
-<td align="left">12:21:42</td>
-<td align="left">12:22:12</td>
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">U Nollendorfplatz (Berlin)</td>
+<td align="left">12:17:00</td>
+<td align="left">12:17:00</td>
 </tr>
 <tr class="odd">
-<td align="left">S2</td>
-<td align="left">S Buch</td>
-<td align="left">S+U Potsdamer Platz Bhf (Berlin)</td>
-<td align="left">12:23:48</td>
-<td align="left">12:24:18</td>
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">U Bulowstr. (Berlin)</td>
+<td align="left">12:18:30</td>
+<td align="left">12:18:30</td>
 </tr>
 <tr class="even">
-<td align="left">S2</td>
-<td align="left">S Buch</td>
-<td align="left">S+U Brandenburger Tor (Berlin)</td>
-<td align="left">12:25:54</td>
-<td align="left">12:26:24</td>
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">U Gleisdreieck (Berlin)</td>
+<td align="left">12:20:30</td>
+<td align="left">12:20:30</td>
 </tr>
 <tr class="odd">
-<td align="left">S2</td>
-<td align="left">S Buch</td>
-<td align="left">S+U Friedrichstr. Bhf (Berlin)</td>
-<td align="left">12:27:36</td>
-<td align="left">12:28:24</td>
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">U Mendelssohn-Bartholdy-Park (Berlin)</td>
+<td align="left">12:22:00</td>
+<td align="left">12:22:00</td>
 </tr>
 <tr class="even">
-<td align="left">S7</td>
-<td align="left">S Ahrensfelde Bhf</td>
-<td align="left">S+U Friedrichstr. Bhf (Berlin)</td>
-<td align="left">12:30:36</td>
-<td align="left">12:31:24</td>
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">S+U Potsdamer Platz (Bln) [U2]</td>
+<td align="left">12:23:30</td>
+<td align="left">12:23:30</td>
 </tr>
 <tr class="odd">
-<td align="left">S7</td>
-<td align="left">S Ahrensfelde Bhf</td>
-<td align="left">S Hackescher Markt (Berlin)</td>
-<td align="left">12:32:54</td>
-<td align="left">12:33:24</td>
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">U Mohrenstr. (Berlin)</td>
+<td align="left">12:25:00</td>
+<td align="left">12:25:00</td>
 </tr>
 <tr class="even">
-<td align="left">S7</td>
-<td align="left">S Ahrensfelde Bhf</td>
-<td align="left">S+U Alexanderplatz Bhf (Berlin)</td>
-<td align="left">12:34:36</td>
-<td align="left">12:35:24</td>
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">Berlin, U Stadtmitte U2</td>
+<td align="left">12:26:00</td>
+<td align="left">12:26:00</td>
+</tr>
+<tr class="odd">
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">U Hausvogteiplatz (Berlin)</td>
+<td align="left">12:27:30</td>
+<td align="left">12:27:30</td>
+</tr>
+<tr class="even">
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">U Spittelmarkt (Berlin)</td>
+<td align="left">12:29:00</td>
+<td align="left">12:29:00</td>
+</tr>
+<tr class="odd">
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">U Markisches Museum (Berlin)</td>
+<td align="left">12:30:00</td>
+<td align="left">12:30:00</td>
+</tr>
+<tr class="even">
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">U Klosterstr. (Berlin)</td>
+<td align="left">12:31:30</td>
+<td align="left">12:31:30</td>
+</tr>
+<tr class="odd">
+<td align="left">U2</td>
+<td align="left">S+U Pankow</td>
+<td align="left">S+U Alexanderplatz (Berlin) [U2]</td>
+<td align="left">12:33:30</td>
+<td align="left">12:33:30</td>
 </tr>
 </tbody>
 </table>
@@ -211,7 +246,7 @@
 <a class="sourceLine" id="cb7-3" data-line-number="3">to &lt;-<span class="st"> "Alexanderplatz"</span></a>
 <a class="sourceLine" id="cb7-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.time">system.time</a></span> (<span class="kw"><a href="../reference/gtfs_route.html">gtfs_route</a></span> (gtfs, <span class="dt">from =</span> from, <span class="dt">to =</span> to, <span class="dt">start_time =</span> <span class="st">"12:00:00"</span>, <span class="dt">day =</span> <span class="st">"Sunday"</span>))</a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   0.192   0.000   0.099</code></pre>
+##   0.200   0.000   0.102</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span> (gtfs)</a></code></pre></div>
 <pre><code>## [1] "calendar"   "routes"     "trips"      "stop_times" "stops"     
 ## [6] "transfers"</code></pre>
@@ -221,7 +256,7 @@
 ## [6] "transfers"  "timetable"  "stop_ids"   "trip_ids"</code></pre>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.time">system.time</a></span> (<span class="kw"><a href="../reference/gtfs_route.html">gtfs_route</a></span> (gtfs, <span class="dt">from =</span> from, <span class="dt">to =</span> to, <span class="dt">start_time =</span> <span class="st">"12:00:00"</span>))</a></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   0.184   0.000   0.109</code></pre>
+##   0.144   0.004   0.077</code></pre>
 <p>Note that the <code>day</code> parameter is used to extract the timetable, after which it is no longer required in the actual call to <code><a href="../reference/gtfs_route.html">gtfs_route()</a></code>.</p>
 </div>
 <div id="routing-by-mode-of-transport" class="section level2">
@@ -560,32 +595,32 @@
 </h1>
 <p>The <code>gtfsrouter</code> package is intended both to enable statistical analyses of GTFS data sets, as well as for personal, pragmatic purposes. In the latter regard, the package provides two “convenience” functions to allow single-call queries for next available services to “home” and “work” stations. These functions require some initial set-up through specifying environmental variables, but once done can be executed as single calls from any <strong>R</strong> session to return the next available service.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw"><a href="../reference/go_home.html">go_home</a></span> ()</a></code></pre></div>
-<pre><code>##    route_name              trip_name                        stop_name
-## 1          S7 S Potsdam Hauptbahnhof  S+U Alexanderplatz Bhf (Berlin)
-## 2          S7 S Potsdam Hauptbahnhof      S Hackescher Markt (Berlin)
-## 3          S7 S Potsdam Hauptbahnhof   S+U Friedrichstr. Bhf (Berlin)
-## 4          S1          S Wannsee Bhf   S+U Friedrichstr. Bhf (Berlin)
-## 5          S1          S Wannsee Bhf   S+U Brandenburger Tor (Berlin)
-## 6          S1          S Wannsee Bhf S+U Potsdamer Platz Bhf (Berlin)
-## 7          S1          S Wannsee Bhf      S Anhalter Bahnhof (Berlin)
-## 8          S1          S Wannsee Bhf     S+U Yorckstr. S1 U7 (Berlin)
-## 9          S1          S Wannsee Bhf   S Julius-Leber-Brucke (Berlin)
-## 10         S1          S Wannsee Bhf            S Schoneberg (Berlin)
-## 11        S46  S+U Gesundbrunnen Bhf            S Schoneberg (Berlin)
-## 12        S46  S+U Gesundbrunnen Bhf   S+U Innsbrucker Platz (Berlin)
+<pre><code>##    route_name              trip_name                            stop_name
+## 1          S7 S Potsdam Hauptbahnhof      S+U Alexanderplatz Bhf (Berlin)
+## 2          S7 S Potsdam Hauptbahnhof          S Hackescher Markt (Berlin)
+## 3          S7 S Potsdam Hauptbahnhof       S+U Friedrichstr. Bhf (Berlin)
+## 4          S2          S Lichtenrade       S+U Friedrichstr. Bhf (Berlin)
+## 5          S2          S Lichtenrade       S+U Brandenburger Tor (Berlin)
+## 6          S2          S Lichtenrade     S+U Potsdamer Platz Bhf (Berlin)
+## 7          S2          S Lichtenrade          S Anhalter Bahnhof (Berlin)
+## 8          S2          S Lichtenrade S+U Yorckstr. S2 S25 S26 U7 (Berlin)
+## 9          S2          S Lichtenrade              S Sudkreuz Bhf (Berlin)
+## 10        S46              S Westend              S Sudkreuz Bhf (Berlin)
+## 11        S46              S Westend                S Schoneberg (Berlin)
+## 12        S46              S Westend       S+U Innsbrucker Platz (Berlin)
 ##    arrival_time departure_time
 ## 1      12:19:54       12:20:42
 ## 2      12:21:54       12:22:24
 ## 3      12:23:54       12:24:42
-## 4      12:25:30       12:26:12
-## 5      12:27:24       12:27:54
-## 6      12:29:24       12:29:54
-## 7      12:31:30       12:32:18
-## 8      12:34:42       12:35:12
-## 9      12:36:24       12:36:54
-## 10     12:38:18       12:38:48
-## 11     12:43:12       12:43:42
-## 12     12:44:54       12:45:24</code></pre>
+## 4      12:28:00       12:28:42
+## 5      12:29:54       12:30:24
+## 6      12:31:54       12:32:24
+## 7      12:34:00       12:34:30
+## 8      12:36:42       12:37:12
+## 9      12:39:18       12:39:54
+## 10     12:43:00       12:43:42
+## 11     12:45:12       12:45:42
+## 12     12:46:54       12:47:24</code></pre>
 <p>The complentary function, <code><a href="../reference/go_to_work.html">go_to_work()</a></code> routes in the reverse direction. These functions are intended to allow real-time queries of public transport schedules from within the comfort of an <strong>R</strong> session, and will generally be much quicker – and hopefully easier – than the arguably burdensome necessity of switching attention from productive <strong>R</strong> programming to the usual app or website otherwise needed to answer the simple question of when I ought to leave today?</p>
 <p>Successfully calling that function requires setting three environmental variables:</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Sys.setenv">Sys.setenv</a></span> (<span class="st">"gtfs_home"</span> =<span class="st"> "&lt;my home station&gt;"</span>)</a>
@@ -655,17 +690,9 @@
 <a class="sourceLine" id="cb27-7" data-line-number="7">                      <span class="dt">end_time =</span> end_time)</a></code></pre></div>
 <pre><code>## Loading required namespace: geodist</code></pre>
 <pre><code>## Loading required namespace: lwgeom</code></pre>
-<pre><code>## Registered S3 methods overwritten by 'ggplot2':
-##   method         from 
-##   [.quosures     rlang
-##   c.quosures     rlang
-##   print.quosures rlang</code></pre>
-<pre><code>## Registered S3 method overwritten by 'R.oo':
-##   method        from       
-##   throw.default R.methodsS3</code></pre>
 <pre><code>## Linking to GEOS 3.5.0, GDAL 2.2.2, PROJ 4.8.0</code></pre>
 <p>Note that the isochrone will be calculated out to five minutes after the first service to depart from Alexander Platz <em>after</em> 12:00. If, for example, this first service actually departs at 12:02, then the isochrones will define the range of all services leaving that station and travelling until 12:07. This function returns an object of class <code>gtfs_isochrone</code>, which has the following structure:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span> (ic)</a></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span> (ic)</a></code></pre></div>
 <pre><code>## List of 7
 ##  $ start_point:Classes 'sf' and 'data.frame':    1 obs. of  2 variables:
 ##   ..$ stop_name: Factor w/ 1 level "S+U Alexanderplatz (Berlin) [U8]": 1
@@ -708,7 +735,7 @@
 ##  - attr(*, "class")= chr [1:2] "gtfs_isochrone" "list"</code></pre>
 <p>As mentioned above, the <code>start_point</code> item defines the single start point for the isochrone; the <code>mid_points</code> include stops which all routes pass through on their way to the terminal points reachable within the specified time range; and <code>end_points</code> defines those terminal, isochrone points. The return object also includes information on the non-convex (“alpha”) hull defining the boundary of the terminal points (see the <a href="https://cran.r-project.org/package=alphahull"><code>alphahull</code> package</a> for details), and geometric lines representing the actual routes taken. Finally, the <code>hull</code> time also quantifies its area and width-to-length ratio. The latter is informative, as higher values generally indicate a greater reachable area, while lower values are typically indicative of a radial system primarily serving transport in two directions (in and out of a city).</p>
 <p>The object returned from the <code><a href="../reference/gtfs_isochrone.html">gtfs_isochrone()</a></code> function also has its own plot method, which automatically opens a browser tab, and displays the start and end points (in green and red, respectively), all intermediate points, and the lines of the routes travelled. This uses the <code>mapview</code> package which must be installed for this to work. A static example is shown below:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span> (ic)</a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span> (ic)</a></code></pre></div>
 <p><img src="isochrone.png" width="100%"></p>
 </div>
   </div>
