@@ -162,12 +162,71 @@ largley unavoidable.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='co'># For general use, please set these three variables:</span>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.setenv'>Sys.setenv</a></span> (<span class='st'>"gtfs_home"</span> <span class='kw'>=</span> <span class='st'>"&lt;my home station&gt;"</span>)
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.setenv'>Sys.setenv</a></span> (<span class='st'>"gtfs_work"</span> <span class='kw'>=</span> <span class='st'>"&lt;my work station&gt;"</span>)
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.setenv'>Sys.setenv</a></span> (<span class='st'>"gtfs_data"</span> <span class='kw'>=</span> <span class='st'>"/full/path/to/gtfs.zip"</span>)
+<span class='co'># }</span><div class='input'><span class='co'># The following illustrate use with sample data bundled with package</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.setenv'>Sys.setenv</a></span> (<span class='st'>"gtfs_home"</span> <span class='kw'>=</span> <span class='st'>"Tempelhof"</span>)
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.setenv'>Sys.setenv</a></span> (<span class='st'>"gtfs_work"</span> <span class='kw'>=</span> <span class='st'>"Alexanderplatz"</span>)
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.setenv'>Sys.setenv</a></span> (<span class='st'>"gtfs_data"</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/file.path'>file.path</a></span> (<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/tempfile'>tempdir</a></span> (), <span class='st'>"vbb.zip"</span>))
 <span class='fu'><a href='process_gtfs_local.html'>process_gtfs_local</a></span> () <span class='co'># If not already done</span>
-<span class='fu'>go_home</span> () <span class='co'># next available service</span>
-<span class='fu'>go_home</span> (<span class='fl'>3</span>) <span class='co'># Wait until third service after that</span>
+<span class='fu'>go_home</span> (<span class='kw'>start_time</span> <span class='kw'>=</span> <span class='st'>"12:00"</span>) <span class='co'># next available service after 12:00</span></div><div class='output co'>#&gt;    route_name       trip_name                        stop_name arrival_time
+#&gt; 1          U8 S+U Hermannstr. S+U Alexanderplatz (Berlin) [U8]     12:03:30
+#&gt; 2          U8 S+U Hermannstr.     S+U Jannowitzbrucke (Berlin)     12:05:00
+#&gt; 3          U8 S+U Hermannstr.   U Heinrich-Heine-Str. (Berlin)     12:06:30
+#&gt; 4          U8 S+U Hermannstr.           U Moritzplatz (Berlin)     12:08:00
+#&gt; 5          U8 S+U Hermannstr.        U Kottbusser Tor (Berlin)     12:10:00
+#&gt; 6          U8 S+U Hermannstr.         U Schonleinstr. (Berlin)     12:11:30
+#&gt; 7          U8 S+U Hermannstr.          U Hermannplatz (Berlin)     12:13:30
+#&gt; 8          U8 S+U Hermannstr.            U Boddinstr. (Berlin)     12:15:00
+#&gt; 9          U8 S+U Hermannstr.             U Leinestr. (Berlin)     12:16:30
+#&gt; 10         U8 S+U Hermannstr.         S+U Hermannstr. (Berlin)     12:17:30
+#&gt; 11        S41  S Sudkreuz Bhf         S+U Hermannstr. (Berlin)     12:19:24
+#&gt; 12        S41  S Sudkreuz Bhf           S+U Tempelhof (Berlin)     12:23:12
+#&gt;    departure_time
+#&gt; 1        12:03:30
+#&gt; 2        12:05:00
+#&gt; 3        12:06:30
+#&gt; 4        12:08:00
+#&gt; 5        12:10:00
+#&gt; 6        12:11:30
+#&gt; 7        12:13:30
+#&gt; 8        12:15:00
+#&gt; 9        12:16:30
+#&gt; 10       12:17:30
+#&gt; 11       12:19:54
+#&gt; 12       12:23:42</div><div class='input'><span class='fu'>go_home</span> (<span class='fl'>3</span>, <span class='kw'>start_time</span> <span class='kw'>=</span> <span class='st'>"12:00"</span>) <span class='co'># Wait until third service after that</span></div><div class='output co'>#&gt;    route_name       trip_name                        stop_name arrival_time
+#&gt; 1          U8 S+U Hermannstr. S+U Alexanderplatz (Berlin) [U8]     12:13:30
+#&gt; 2          U8 S+U Hermannstr.     S+U Jannowitzbrucke (Berlin)     12:15:00
+#&gt; 3          U8 S+U Hermannstr.   U Heinrich-Heine-Str. (Berlin)     12:16:30
+#&gt; 4          U8 S+U Hermannstr.           U Moritzplatz (Berlin)     12:18:00
+#&gt; 5          U8 S+U Hermannstr.        U Kottbusser Tor (Berlin)     12:20:00
+#&gt; 6          U8 S+U Hermannstr.         U Schonleinstr. (Berlin)     12:21:30
+#&gt; 7          U8 S+U Hermannstr.          U Hermannplatz (Berlin)     12:23:30
+#&gt; 8          U8 S+U Hermannstr.            U Boddinstr. (Berlin)     12:25:00
+#&gt; 9          U8 S+U Hermannstr.             U Leinestr. (Berlin)     12:26:30
+#&gt; 10         U8 S+U Hermannstr.         S+U Hermannstr. (Berlin)     12:27:30
+#&gt; 11        S41  S Sudkreuz Bhf         S+U Hermannstr. (Berlin)     12:29:24
+#&gt; 12        S41  S Sudkreuz Bhf           S+U Tempelhof (Berlin)     12:33:12
+#&gt;    departure_time
+#&gt; 1        12:13:30
+#&gt; 2        12:15:00
+#&gt; 3        12:16:30
+#&gt; 4        12:18:00
+#&gt; 5        12:20:00
+#&gt; 6        12:21:30
+#&gt; 7        12:23:30
+#&gt; 8        12:25:00
+#&gt; 9        12:26:30
+#&gt; 10       12:27:30
+#&gt; 11       12:29:54
+#&gt; 12       12:33:42</div><div class='input'># Generally, `start_time` will not be specified, in which case `go_home` will
+# return next available service from current system time, so calls will
+# generally be as simple as:
+</div><span class='co'># NOT RUN {</span>
+<span class='fu'>go_home</span> ()
+<span class='fu'>go_home</span> (<span class='fl'>3</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
